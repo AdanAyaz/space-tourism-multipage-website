@@ -1,0 +1,20 @@
+.body {
+  &__page {
+    &--1 {
+      background-image: url("/space-tourism-website-main/starter-code/images/home-desktop-bg/background-home-desktop.jpg");
+      background-position: center;
+    }
+    &--2 {
+      background-image: url("/space-tourism-website-main/starter-code/images/destination-inner-page-01/background-destination-desktop.jpg");
+      background-position: center;
+    }
+    &--3 {
+      background-image: url("/space-tourism-website-main/starter-code/images/crew-images-inner-page-02/background-crew-desktop.jpg");
+      background-position: center;
+    }
+    &--4 {
+      background-image: url("/space-tourism-website-main/starter-code/images/technology-inner-page-03/background-technology-desktop.jpg");
+      background-position: center;
+    }
+  }
+}

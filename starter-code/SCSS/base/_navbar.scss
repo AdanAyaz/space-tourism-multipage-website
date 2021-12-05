@@ -1,0 +1,55 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.navbar {
+  display: flex;
+  height: 9.6rem;
+  width: 96.1%;
+  color: white;
+  z-index: 500;
+
+  position: fixed;
+  top: 5rem;
+  right: 0;
+
+  &__body {
+    flex: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__line {
+    border: none;
+    height: 1px;
+    z-index: 1;
+    background-color: $navbar-background;
+
+    position: absolute;
+    top: 4.6rem;
+    left: 8rem;
+    width: 37%;
+  }
+  &__left {
+    flex: 45%;
+  }
+  &__right {
+    flex: 55%;
+    background: linear-gradient(
+      to right,
+      rgba($navbar-background, 0.15) 10%,
+      transparent 50%
+    );
+    backdrop-filter: blur(2rem);
+    height: 100%;
+    padding: 0vw 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & > span {
+      @include nav-text;
+      text-transform: uppercase;
+      padding: 8% 0;
+    }
+  }
+}

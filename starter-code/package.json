@@ -1,0 +1,14 @@
+{
+  "name": "space-tourism-website",
+  "version": "1.0.0",
+  "description": "intermediate-challenge-in-progress",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass --watch SCSS/main.scss -o style/style.css"
+  },
+  "author": "Adan Ayaz",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
