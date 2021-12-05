@@ -1,12 +1,11 @@
 html {
   font-size: 62.5%; }
 
-body {
+.alpha-body {
   max-width: 100vw;
   position: relative;
   margin: 0;
-/*   overflow-x: hidden; */
-}
+  overflow-x: hidden; }
 
 * {
   padding: 0;
@@ -77,3 +76,56 @@ body {
       letter-spacing: 2.7;
       text-transform: uppercase;
       padding: 8% 0; }
+  .navbar__mobile {
+    display: none; }
+    .navbar__mobile--nav {
+      display: none; }
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    top: 0; }
+    .navbar__line {
+      display: none; }
+    .navbar__right {
+      display: none; }
+    .navbar__mobile {
+      display: inline-block;
+      position: absolute;
+      z-index: 1000;
+      height: 100%;
+      width: 100%; }
+      .navbar__mobile--nav {
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2000;
+        color: white;
+        backdrop-filter: blur(8rem);
+        width: 0%;
+        height: 100%;
+        transition: ease 0.5s; }
+    .navbar__ham, .navbar__hamburger {
+      position: absolute;
+      top: 4rem;
+      right: 4rem; }
+    .navbar__ham {
+      display: none; }
+    .navbar__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      transform: translate(10%, 50%);
+      font-family: "Barlow Condensed";
+      font-size: 2.3rem;
+      letter-spacing: 2.7;
+      width: 80%;
+      height: 30%; }
+      .navbar__list--item {
+        padding: 3vw 0vw; }
+    .navbar__link {
+      text-decoration: none;
+      color: white; }
+    .navbar__ham:checked ~ .navbar__mobile--nav {
+      width: 67.7%; } }
