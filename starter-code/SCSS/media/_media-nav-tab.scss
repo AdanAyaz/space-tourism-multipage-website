@@ -1,0 +1,17 @@
+.navbar {
+  @include mediaTab {
+    top: 0;
+  }
+  &__line {
+    @include mediaTab {
+      display: none;
+    }
+  }
+}
+.navigation__link {
+  @include mediaTab {
+    span {
+      display: none;
+    }
+  }
+}

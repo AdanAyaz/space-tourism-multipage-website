@@ -65,7 +65,12 @@
 }
 
 @mixin mediaPhone {
-  @media (max-width: 667px) {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+@mixin mediaTab {
+  @media (max-width: 768px) {
     @content;
   }
 }
