@@ -1,0 +1,63 @@
+@import "../utilities/mixins";
+html {
+  @include mediaPhone {
+    font-size: 56.25%;
+  }
+}
+.alpha-body {
+  overflow-x: scroll;
+}
+.body__page--1 {
+  @include mediaPhone {
+    background-image: url("../../images/home-desktop-bg/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.home {
+  &__textBody {
+    @include mediaPhone {
+      position: static;
+      width: 100vw;
+      height: 27.6rem;
+      text-align: center;
+      text-transform: none;
+    }
+    h2 {
+      @include mediaPhone {
+        @include subheading-1-mb;
+        text-transform: uppercase;
+      }
+    }
+    h1 {
+      @include mediaPhone {
+        @include heading-1-mb;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      @include mediaPhone {
+        margin: 0vw 10vw;
+      }
+    }
+  }
+  &__explore__body {
+    @include mediaPhone {
+      position: relative;
+    }
+  }
+  &__explore {
+    @include mediaPhone {
+      @include heading-4-mb;
+      position: static;
+      width: 15rem;
+      height: 15rem;
+      z-index: 1000;
+    }
+  }
+}

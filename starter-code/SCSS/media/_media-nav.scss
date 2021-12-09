@@ -1,2 +1,108 @@
+@import "../utilities/mixins";
+
 @media screen and (max-width: 700px) {
+  .navbar {
+    top: 0;
+
+    &__line {
+      display: none;
+    }
+    &__right {
+      display: none;
+    }
+    &__mobile {
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      &--nav {
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2000;
+        color: white;
+        backdrop-filter: blur(4rem);
+
+        width: 0%;
+        height: 100%;
+
+        transition: all ease-in-out 0.5s;
+      }
+    }
+    &__ham,
+    &__hamburger {
+      position: absolute;
+      top: 5rem;
+      right: 4rem;
+      z-index: 2100;
+    }
+    &__ham {
+      display: none;
+    }
+    &__icon {
+      position: relative;
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: rgb(255, 251, 251);
+        display: inline-block;
+        transition: all ease-in-out 0.6s;
+        transform-origin: left;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -1rem;
+      }
+      &::after {
+        top: 1rem;
+      }
+    }
+    &__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      transform: translate(10%, 50%);
+      @include nav-text-mobile;
+      width: 80%;
+      height: 30%;
+
+      &--item {
+        padding: 3vw 0vw;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      color: white;
+    }
+    &__ham:checked ~ &__mobile--nav {
+      width: 67.7%;
+    }
+    &__ham:checked + &__hamburger {
+      span {
+        background-color: transparent;
+      }
+      span::before {
+        transform: rotate(45deg);
+        // left: 0.2rem;
+      }
+      span::after {
+        transform: rotate(-45deg);
+        top: 1.1rem;
+      }
+    }
+  }
 }
+
+// NAVBAR CODE - STATUS: ONGOING

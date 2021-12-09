@@ -1,9 +1,12 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+
 @import "layout/layout";
 
 @import "base/home";
 @import "base/navbar";
 
-@import "media/media-nav";
+@import "home/homepage";
 
-@import "utilities/variables";
-@import "utilities/mixins";
+@import "media/media-nav";
+@import "media/media-homepage";
